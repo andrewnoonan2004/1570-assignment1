@@ -1,0 +1,46 @@
+
+body {
+    background-color: #fbf1c7;
+    color:#98971a;
+    margin-top: 80px;
+}
+body.dark-mode {
+    background-color: #282828;
+    color:#98971a;
+}
+.NavBar {
+    background-color: #fbf1c7;
+    color:#98971a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+a {
+    display: inline-block;
+    background-color: #8ec07c;
+    border-radius: 60px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+    background-color: #79740e;
+}
+
+.centered-header {
+    text-align: center;
+
+}
+.darkSun {
+  position: fixed;
+  top:15%;
+  left:90%;
+  width: 20px;
+  height: 20x;  
+}
