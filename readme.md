@@ -9,3 +9,8 @@ Tips for styling navbar
 basic little hover effect 
 [Gruvbox Color Scheme](https://github.com/morhetz/gruvbox?tab=readme-ov-file)
 Color Scheme used for this website
+[Create a Dark Mode Switch]{https://www.youtube.com/watch?v=_gKEUYarehE)
+very useful video for creating an aesthetic dark-mode switch
+
+[MDN tables](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/table) 
+boilerplate table stuff

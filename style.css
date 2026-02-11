@@ -1,16 +1,18 @@
-
+/* --- Light Mode (Your Original Green-on-Cream) --- */
 body {
-    background-color: #fbf1c7;
-    color:#98971a;
+    background-color: #fbf1c7; /* Gruvbox Light Background */
+    color: #98971a;           /* Gruvbox Green */
     margin-top: 80px;
+    transition: background-color 0.3s, color 0.3s;
 }
-body.dark-mode {
-    background-color: #282828;
-    color:#98971a;
-}
-.NavBar {
+
+.NavBar, .centered-header {
     background-color: #fbf1c7;
-    color:#98971a;
+    color: #98971a;
+    transition: background-color 0.3s;
+}
+
+.NavBar {
     position: fixed;
     top: 0;
     left: 0;
@@ -19,28 +21,104 @@ body.dark-mode {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    z-index: 1000;
 }
 
+/* --- Dark Mode Overrides--- */
+body.dark-mode {
+    background-color: #282828; 
+    color: #b8bb26;           
+}
+
+.dark-mode .NavBar, 
+.dark-mode .centered-header {
+    background-color: #282828;
+    color: #b8bb26;           
+}
+
+/* --- Navigation Links --- */
 a {
     display: inline-block;
-    background-color: #8ec07c;
+    background-color: #8ec07c; /* Aqua/Green button */
+    color: #282828; 
+    padding: 8px 16px;
     border-radius: 60px;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
+    transition: all 0.3s;
 }
 
 a:hover {
-    background-color: #79740e;
+    background-color: #b8bb26;
+    color: #282828;
+}
+table {
+    border-collapse: collapse;
+    border: 2px solid #282828; 
+    color: #98971a;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    transition: all 0.3s;
 }
 
-.centered-header {
-    text-align: center;
+caption {
+    caption-side: bottom;
+    padding: 10px;
+    font-weight: bold;
+}
 
+thead, tfoot {
+    background-color: #ebdbb2; /* Slightly darker cream for contrast */
 }
-.darkSun {
-  position: fixed;
-  top:15%;
-  left:90%;
-  width: 20px;
-  height: 20x;  
+
+th, td {
+    border: 1px solid #282828;
+    padding: 8px 10px;
 }
+
+tbody > tr:nth-of-type(even) {
+    background-color: #f2e5bc; /* Subtle zebra stripe */
+}
+
+/* --- Dark Mode Table Overrides --- */
+.dark-mode table {
+    border-color: #ebdbb2;     /* Light borders in dark mode */
+    color: #b8bb26;           /* Brighter green */
+}
+
+.dark-mode th, 
+.dark-mode td {
+    border-color: #504945;     /* Gruvbox grey for inner borders */
+}
+
+.dark-mode thead, 
+.dark-mode tfoot {
+    background-color: #3c3836; /* Darker header background */
+}
+
+.dark-mode tbody > tr:nth-of-type(even) {
+    background-color: #32302f; /* Dark zebra stripe */
+}
+
+
+/* --- Theme Switcher --- */
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: #d79921; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 45px;
+    right: 20px;
+    cursor: pointer;
+    border: none;
+    z-index: 1001;
+}
+
+#theme-switch img:last-child { display: none; }
+.dark-mode #theme-switch img:first-child { display: none; }
+.dark-mode #theme-switch img:last-child { display: block; }

@@ -7,8 +7,13 @@
         <script src="./script.js" defer ></script>
         <link rel="icon" href="./favicon.ico" type="image/x-icon">
     </head>
+    <body>
     <header class="NavBar">
-    <nav>
+        <button id="theme-switch">
+            <img src="dark_mode_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24.svg">
+            <img src="light_mode_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24.svg">
+        </button>
+    <nav class="subnav">
         <a href="./index.html">Home</a>
         <a href="./debian.html">Debian</a>
         <a href="./ubuntu.html">Ubuntu</a>
@@ -20,10 +25,82 @@
       <div class="centered-header">
         <h1>
 Andrew's Guide to Linux Distros
-        </h1>
+        </h1>        
+        <section>
+            <h1>What is a Linux Distro?</h1>
+            <p>
+                This website provides a guide to help with the important task of choosing the best Linux Distro for you. You may be wondering, what exactly is a Linux distro?
+            </p>
+            <p>
+                At its most basic level, a linux distro is a complete operating system built around the Linux system. In addition to the kernel, they will typically include(at a minimum) the GNU Core Utils, a compiler, and a shell.
+            </p>
+            </section>
+            <section>
+                <h2>
+                    Why Choose Linux?
+                </h2>
+                <p>
+                    Linux offers a variety of advantages over Windows and MacOS, as well as some notable downsides for certain users. 
+
+                </p>
+                <h3>Advantages</h3>
+                <ul>
+                    <li> Choice</li>
+                    <li> Cost</li>
+                    <li>User Control</li>
+                    <li>More Efficient Software</li>
+                    <li>Freedom</li>
+                    <li>Customizability</li>
+                    <li>Security*</li>
+                </ul>
+                <h3>Disadvantages</h3>
+                <ul>
+                    <li> Commercial Software Availability </li>
+                    <li>Some Usability Issues</li>
+                    <li>Difficulty Finding Support</li>
+                    <li>Hardware Compatibility</li>
+                </ul>
+                <h3>
+                    (simplified)Differences between Distros
+                </h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Release Cycle</th>
+                            <th scope="col">Package Manager</th>
+                            <th scope="col">Corporate or Community</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Fedora</th>
+                            <td><i>Leading Edge</i></td>
+                            <td>DNF</td>
+                            <td>Community with corporate backing</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Ubuntu</th>
+                            <td>Stable</td>
+                            <td>APT</td>
+                            <td>Corporate</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Debian</th>
+                            <td>Stable</td>
+                            <td>APT</td>
+                            <td>Community</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Arch Linux</th>
+                            <td>Rolling</td>
+                            <td>Pacman</td>
+                            <td>Community</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </section>
     </div>
-    <div class="button1">
-    <input class="darkSun" type="image" src="darkSun.png">
-    </div>
+    </body>
     </html>
 </html>
