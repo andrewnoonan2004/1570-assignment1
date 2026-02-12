@@ -1,17 +1,37 @@
-/* --- Light Mode (Your Original Green-on-Cream) --- */
+/* --- Light Mode --- */
+:root{
+    --gb-bg: #fbf1c7;
+    --gb-cream: #ebdbb2;
+    --gb-zebra: #f2e5bc;
+    --gb-fg: #98971a;
+    --gb-fg-bright: #b8bb26;
+    --gb-aqua: #8ec07c;
+    --gb-accent: #d79921;
+    --gb-dark: #282828;
+    --gb-gray: #504945;
+    --gb-3: #3c3836;
+    --gb-darkstripe: #32302f;
+    --gb-red: #cc241d;
+    --gb-muted: #7f6b2a;
+}
 body {
-    background-color: #fbf1c7; /* Gruvbox Light Background */
-    color: #98971a;           /* Gruvbox Green */
+    background-color: var(--gb-bg); /* Gruvbox Light Background */
+    color: var(--gb-fg);           /* Gruvbox Green */
     margin-top: 80px;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .NavBar, .centered-header {
-    background-color: #fbf1c7;
-    color: #98971a;
+    background-color: var(--gb-bg);
+    color: var(--gb-fg);
     transition: background-color 0.3s;
+    text-align: center;
 }
-
+img {
+    max-width: 25%;
+    height: auto;
+    display: block;
+}
 .NavBar {
     position: fixed;
     top: 0;
@@ -26,21 +46,21 @@ body {
 
 /* --- Dark Mode Overrides--- */
 body.dark-mode {
-    background-color: #282828; 
-    color: #b8bb26;           
+    background-color: var(--gb-dark);
+    color: var(--gb-fg-bright);
 }
 
 .dark-mode .NavBar, 
 .dark-mode .centered-header {
-    background-color: #282828;
-    color: #b8bb26;           
+    background-color: var(--gb-dark);
+    color: var(--gb-fg-bright);           
 }
 
 /* --- Navigation Links --- */
 a {
     display: inline-block;
-    background-color: #8ec07c; /* Aqua/Green button */
-    color: #282828; 
+    background-color: var(--gb-aqua); /* Aqua/Green button */
+    color: var(--gb-dark); 
     padding: 8px 16px;
     border-radius: 60px;
     text-decoration: none;
@@ -48,27 +68,22 @@ a {
 }
 
 a:hover {
-    background-color: #b8bb26;
-    color: #282828;
+    background-color: var(--gb-fg-bright);
+    color: var(--gb-dark);
 }
 table {
     border-collapse: collapse;
-    border: 2px solid #282828; 
-    color: #98971a;
+    border: 2px solid var(--gb-dark); 
+    color: var(--gb-fg);
     font-family: sans-serif;
     font-size: 0.8rem;
     letter-spacing: 1px;
     transition: all 0.3s;
 }
 
-caption {
-    caption-side: bottom;
-    padding: 10px;
-    font-weight: bold;
-}
 
 thead, tfoot {
-    background-color: #ebdbb2; /* Slightly darker cream for contrast */
+    background-color: var(--gb-cream); /* Slightly darker cream for contrast */
 }
 
 th, td {
@@ -77,29 +92,32 @@ th, td {
 }
 
 tbody > tr:nth-of-type(even) {
-    background-color: #f2e5bc; /* Subtle zebra stripe */
+    background-color: var(--gb-zebra); /* Subtle zebra stripe */
 }
 
 /* --- Dark Mode Table Overrides --- */
 .dark-mode table {
-    border-color: #ebdbb2;     /* Light borders in dark mode */
-    color: #b8bb26;           /* Brighter green */
+    border-color: var(--gb-cream);     /* Light borders in dark mode */
+    color: var(--gb-fg-bright);           /* Brighter green */
 }
 
 .dark-mode th, 
 .dark-mode td {
-    border-color: #504945;     /* Gruvbox grey for inner borders */
+    border-color: var(--gb-gray);     /* Gruvbox grey for inner borders */
 }
 
 .dark-mode thead, 
 .dark-mode tfoot {
-    background-color: #3c3836; /* Darker header background */
+    background-color: var(--gb-3); /* Darker header background */
 }
 
 .dark-mode tbody > tr:nth-of-type(even) {
-    background-color: #32302f; /* Dark zebra stripe */
+    background-color: var(--gb-darkstripe); /* Dark zebra stripe */
 }
 
+.done {
+    text-decoration: line-through solid var(--gb-red) 5px;
+}
 
 /* --- Theme Switcher --- */
 #theme-switch {
@@ -107,7 +125,7 @@ tbody > tr:nth-of-type(even) {
     width: 50px;
     padding: 0;
     border-radius: 50%;
-    background-color: #d79921; 
+    background-color: var(--gb-accent); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,3 +140,68 @@ tbody > tr:nth-of-type(even) {
 #theme-switch img:last-child { display: none; }
 .dark-mode #theme-switch img:first-child { display: none; }
 .dark-mode #theme-switch img:last-child { display: block; }
+
+/* --- Semantic element styles --- */
+main {
+    max-width: 900px;
+    margin: 1.5rem auto;
+    padding: 1rem;
+}
+
+article {
+    background: rgba(235,219,178,0.15);
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.dark-mode article {
+    background: rgba(40,40,40,0.35);
+}
+
+aside {
+    font-size: 0.9rem;
+    color: #6b6b6b;
+    margin: 0.5rem 0;
+    padding: 0.6rem 0.8rem;
+}
+
+footer {
+    text-align: center;
+    padding: 0.8rem 0;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(40,40,40,0.08);
+}
+
+figure {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: var(--gb-muted);
+    margin-top: 0.4rem;
+}
+
+.dark-mode figcaption {
+    color: var(--gb-fg-bright);
+}
+
+/* minimal div/span styling */
+div { /* leave layout mostly unchanged, just ensure consistent flow */
+    box-sizing: border-box;
+}
+
+span.muted {
+    color: var(--gb-muted);
+    font-style: italic;
+}
+
+.dark-mode span.muted {
+    color: var(--gb-fg-bright);
+}
+
+.greeting-text { /* small helper for greeting span */
+    font-weight: 600;
+}
